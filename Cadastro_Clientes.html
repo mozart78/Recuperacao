@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Cadastro</title>
+		<link rel="stylesheet" href="CSS/bootstrap.css" />
+				
+	</head>
+	<body>
+	<fieldset>
+		<div class="container">
+		<h1>Cadastro de Clientes</h1>
+		<form id="formExemplo" data-toggle="validator" role="form" class="row">
+			<div class="form-group" class="col-4">
+				<label for="textNome" class="control-label">Nome&nbsp;&nbsp;&nbsp;&nbsp;</label>
+				<input id="textNome" class="form-control" placeholder="Digite seu Nome..." type="text" required>
+			</div>
+			<div>
+			<p>Selecione a Natureza:</p>
+				<select id="select" onchange="mudarNatureza()">
+					<option value=""></option>
+					<option value="CPF">CPF</option>
+					<option value="CNPJ">CNPJ</option>
+				</select>
+			<p id="retorno"></p>
+			</div>
+			<div class="col-3" class="form-group">
+				<label for="inputcpf/cnpj" class="control-label"></label>
+				<input id="inputcpf/cnpj" class="form-control" placeholder="Digite CPF ou CNPJ" type="cpf/cnpj" 
+					data-error="Por favor, informe CPF ou CNPJ correto." required>
+			</div>
+			<div class="help-block with-errors"></div>
+			<div class="col-2">
+				<button type="submit" class="btn btn-primary" style="margin-top: 30px;">Salvar</button>
+			</div>
+		<script src="cadastro.js"></script>
+		<br/>
+		<table class="table table-striped">
+			<colgroup>
+				<col width="350">
+				<col width="300">
+				
+			</colgroup>
+			<thead>
+				<tr>
+					<th>Nome</th>
+					<th>CPF/CNPJ</th>
+					<th>Editar</th>
+					<th>Excluir</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Fulano</td>
+					<td>xxxxxxxxxxxxxxxxxxxxx</td>
+					<td>
+						<button type="submit" class="btn btn-warning">Editar</button>
+					</td>
+					<td>
+						<button type="submit" class="btn btn-danger">Excluir</button>
+					</td>
+				</tr>
+		</table>
+		</form>
+		</div>
+	</fieldset>
+	</body>
+</html>
